@@ -1,21 +1,29 @@
 package com.example.user.serviceprovidersignup;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.InputType;
 import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import static android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     /*Spinner spinner1;
@@ -34,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button but2;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
+    private EditText mpswEditText;
+    private TextView mToggleTextView;
+
+
 
 
     @Override
@@ -41,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+
         spinner1 = (Spinner) findViewById(R.id.spinner1);
         firebaseAuth = FirebaseAuth.getInstance();
 

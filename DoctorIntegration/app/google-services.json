@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "588444882174",
+    "firebase_url": "https://doctorintegration-fa5e0.firebaseio.com",
+    "project_id": "doctorintegration-fa5e0",
+    "storage_bucket": "doctorintegration-fa5e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588444882174:android:b8bc4d81e5b44617",
+        "android_client_info": {
+          "package_name": "com.example.user.doctorintegration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588444882174-7pi0cuqtvn1tkuj3981dj63lp770n7vd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.doctorintegration",
+            "certificate_hash": "fbf10d88821827bde057db30d54bc8d2b17b91f7"
+          }
+        },
+        {
+          "client_id": "588444882174-0n3q0hqju8cigbcvo6subkmii1tjg5kk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjBvTAHqpLCDyrJDY2Q14vhaSJaI6rlMY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588444882174-0n3q0hqju8cigbcvo6subkmii1tjg5kk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

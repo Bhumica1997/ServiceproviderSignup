@@ -1,5 +1,3 @@
-package com.example.user.myapplication;
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +5,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.example.user.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
     public Button but1;
@@ -18,9 +18,8 @@ public class MainActivity extends AppCompatActivity {
         but1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent toy = new Intent(MainActivity.this, navigate.class);
-
-                //startActivity(toy);
+                Intent toy = new Intent(MainActivity.this, NavigateActivity.class);
+                startActivity(toy);
 
             }
         });
@@ -30,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toy1 = new Intent(MainActivity.this, UsersignupActivity.class);
-
+                Intent toy1 = new Intent(MainActivity.this, UsersignupAvtivity.class);
                 startActivity(toy1);
 
             }
@@ -42,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent toy1 = new Intent(MainActivity.this, third.class);
+                Intent toy1 = new Intent(MainActivity.this, ServiceproviderActivity.class);
 
-                //startActivity(toy1);
+                startActivity(toy1);
 
             }
         });

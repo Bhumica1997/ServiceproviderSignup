@@ -11,7 +11,7 @@ import android.widget.ToggleButton;
 public class MainActivity extends AppCompatActivity {
      private Button bhttonInJava;
      private TextView myedittext;
-     private RadioButton radioButton;3
+     private RadioButton radioButton;
      private RadioGroup radioGroup;
      private ToggleButton private1;
     private ToggleButton private2;
