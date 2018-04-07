@@ -1,12 +1,16 @@
 package com.example.user.doctorintegration;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -21,6 +25,11 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
     ArrayList<DataModel> mModel= new ArrayList<>();
     ArrayList<Integer>  ratings = new ArrayList<>();
     ArrayList<String>  reviews = new ArrayList<>();
+    Context mContext;
+
+    public GetNearbyPlacesData(MapsActivity mapsActivity) {
+        mContext=mapsActivity;
+    }
 
     @Override
     protected String doInBackground(Object... params) {
@@ -49,6 +58,17 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
 
         }
         Log.d("mathew", "onPostExecute Exit");
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+
+                //Toast.makeText(mContext, "clicked ambu", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(mContext, ScrollingActivity.class);
+                mContext.startActivity(intent);
+                return false;
+            }
+        });
     }
 
     private void ShowNearbyPlaces(List<HashMap<String, String>> nearbyPlacesList) {
@@ -73,7 +93,7 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
             //move map camera
             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(25));
         }
     }
 }

@@ -66,7 +66,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     String tabName;
     double latitude;
     double longitude;
-    private int PROXIMITY_RADIUS = 10000;
+    private int PROXIMITY_RADIUS = 1000;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
     Marker mCurrLocationMarker;
@@ -85,7 +85,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         //GridView gridView = (GridView) findViewById(R.id.grid_view);
-        mSearchText = (EditText) findViewById(R.id.input_search);
+       // mSearchText = (EditText) findViewById(R.id.input_search);
         mGps = (ImageView) findViewById(R.id.ic_gps);
         getDeviceLocation();
         Intent intent=getIntent();
@@ -113,7 +113,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mpathology=findViewById(R.id.btnpathology);
 
         //mRestaurants = findViewById(R.id.restaurant);
-        mDetail = findViewById(R.id.bottomcontainer);
+        //mDetail = findViewById(R.id.bottomcontainer);
         mText = findViewById(R.id.position);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -148,100 +148,102 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mLoca.add(new LatLng(12.299379, 76.658349));//28
 
 
+
+
         DataModel model = new DataModel();
         model.setmLocation(new LatLng(12.348477,76.618211));
-        model.setReview("good");
+        //model.setReview("good");
         model.setTitle("PERFECT PATHOLOGY");
         model.setRating(3);
 
         DataModel model1 = new DataModel();
         model1.setmLocation(new LatLng(12330451,76.629726));
-        model1.setReview("average");
+        //model1.setReview("average");
 
         model1.setTitle("ST. labs");
         model1.setRating(3);
 
         DataModel model2 = new DataModel();
         model2.setmLocation(new LatLng(12.329947,76.626920));
-        model2.setReview("average");
+       // model2.setReview("average");
         model2.setTitle("DRM labs");
         model2.setRating(2);
 
         DataModel model3 = new DataModel();
         model3.setmLocation(new LatLng(12.323323,76.631357));
-        model3.setReview("excellent");
+       // model3.setReview("excellent");
         model3.setTitle("Vinayaka diagnostic center");
         model3.setRating(3);
 
         DataModel model4 = new DataModel();
         model4.setmLocation(new LatLng(12.324513,76.673160));
-        model4.setReview("excellent");
+       // model4.setReview("excellent");
         model4.setTitle("hemanth diagnostic center");
         model4.setRating(3);
 
         DataModel model5 = new DataModel();
         model5.setmLocation(new LatLng(12.330802,76.675134));
-        model5.setReview("excellent");
+       // model5.setReview("excellent");
         model5.setTitle("quba diagnostic center");
         model5.setRating(3);
 
         DataModel model6 = new DataModel();
         model6.setmLocation(new LatLng(12.334156, 76.676336));
-        model6.setReview("excellent");
+       // model6.setReview("excellent");
         model6.setTitle("mysore diagnostic center");
         model6.setRating(3);
 
         DataModel model7 = new DataModel();
         model7.setmLocation(new LatLng(12.327868, 76.677365));
-        model7.setReview("excellent");
+       // model7.setReview("excellent");
         model7.setTitle("universal diagnostic center");
         model7.setRating(3);
 
         DataModel model8 = new DataModel();
         model8.setmLocation(new LatLng(12.323843, 76.690927));
-        model8.setReview("excellent");
+       // model8.setReview("excellent");
         model8.setTitle("baba diagnostic center");
         model8.setRating(3);
 
         DataModel model9 = new DataModel();
         model9.setmLocation(new LatLng(12.375089, 76.665328));
-        model9.setReview("excellent");
+       // model9.setReview("excellent");
         model9.setTitle("columbia asia hospital");
         model9.setRating(3);
 
         DataModel model10 = new DataModel();
         model10.setmLocation(new LatLng(12.346672, 76.673225));
-        model10.setReview("excellent");
+       // model10.setReview("excellent");
         model10.setTitle("narayana multispeciality hospital");
         model10.setRating(3);
 
         DataModel model11 = new DataModel();
         model11.setmLocation(new LatLng(12.335023, 76.674855));
-        model11.setReview("excellent");
+        //model11.setReview("excellent");
         model11.setTitle("bio tech diagnostic center");
         model11.setRating(3);
 
         DataModel model12 = new DataModel();
         model12.setmLocation(new LatLng(12.316073, 76.651509));
-        model12.setReview("excellent");
+        //model12.setReview("excellent");
         model12.setTitle("ravi diagnostic center");
         model12.setRating(3);
 
         DataModel model13 = new DataModel();
         model13.setmLocation(new LatLng(12.325547, 76.674684));
-        model13.setReview("good");
+       // model13.setReview("good");
         model13.setTitle("asian diagnostic center");
         model13.setRating(3);
 
         DataModel model14 = new DataModel();
         model14.setmLocation(new LatLng(12.318000, 76.650737));
-        model14.setReview("excellent");
+       // model14.setReview("excellent");
         model14.setTitle("Kannan hospital");
         model14.setRating(3);
 
         DataModel model15 = new DataModel();
         model15.setmLocation(new LatLng(12.308944, 76.677087));
-        model15.setReview("excellent");
+        //model15.setReview("excellent");
         model15.setTitle("sanjevini diagnostic center");
         model15.setRating(3);
 
@@ -253,75 +255,77 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         DataModel model17 = new DataModel();
         model17.setmLocation(new LatLng(12.310947, 76.648907));
-        model17.setReview("excellent");
+       // model17.setReview("excellent");
         model17.setTitle("bhagvan diagnostic center");
         model17.setRating(3);
 
         DataModel model18 = new DataModel();
         model18.setmLocation(new LatLng(12.312960, 76.647277));
-        model18.setReview("excellent");
+       // model18.setReview("excellent");
         model18.setTitle("rama diagnostic center");
         model18.setRating(3);
 
         DataModel model19 = new DataModel();
         model19.setmLocation(new LatLng(12.299483, 76.652255));
-        model19.setReview("excellent");
+        //model19.setReview("excellent");
         model19.setTitle("jss hospital");
         model19.setRating(3);
 
         DataModel model20 = new DataModel();
         model20.setmLocation(new LatLng(12.298906, 76.626293));
-        model20.setReview("excellent");
+        //model20.setReview("excellent");
         model20.setTitle("accura diagnostic center");
         model20.setRating(3);
 
         DataModel model21 = new DataModel();
         model21.setmLocation(new LatLng(12.297409, 76.631529));
-        model21.setReview("excellent");
+        //model21.setReview("excellent");
         model21.setTitle("dr lal path labs");
         model21.setRating(3);
 
         DataModel model22 = new DataModel();
         model22.setmLocation(new LatLng(12.302021, 76.626808));
-        model22.setReview("excellent");
+       // model22.setReview("excellent");
         model22.setTitle("bhagvan diagnostic center");
         model22.setRating(3);
 
         DataModel model23 = new DataModel();
         model23.setmLocation(new LatLng(12.301267, 76.616594));
-        model23.setReview("excellent");
+        //model23.setReview("excellent");
         model23.setTitle("vachana diagnostic center");
         model23.setRating(3);
 
         DataModel model24 = new DataModel();
         model24.setmLocation(new LatLng(12.288436, 76.623032));
-        model24.setReview("excellent");
+        //model24.setReview("excellent");
         model24.setTitle("yashashwini diagnostic  center");
         model24.setRating(3);
 
         DataModel model25 = new DataModel();
         model25.setmLocation(new LatLng(12.285477, 76.625263));
-        model25.setReview("excellent");
+       // model25.setReview("excellent");
         model25.setTitle("mallige diagnostic center");
         model25.setRating(3);
 
         DataModel model26 = new DataModel();
         model26.setmLocation(new LatLng(12.291790, 76.649296));
-        model26.setReview("excellent");
+       // model26.setReview("excellent");
         model26.setTitle("prakash diagnostic  center");
         model26.setRating(3);
 
         DataModel model27 = new DataModel();
         model27.setmLocation(new LatLng(12.298540, 76.653199));
-        model27.setReview("excellent");
+       // model27.setReview("excellent");
         model27.setTitle("apollo hospital");
         model27.setRating(3);
 
         DataModel model28 = new DataModel();
         model28.setmLocation(new LatLng(12.299379, 76.658349));
-        model28.setReview("excellent");
+       // model28.setReview("excellent");
         model28.setTitle("anand diagnostic center");
         model28.setRating(3);
+
+
 
         mModel.add(model);
         mModel.add(model1);
@@ -352,6 +356,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mModel.add(model26);
         mModel.add(model27);
         mModel.add(model28);
+
 
         //  setTab(tabName);
 
@@ -398,61 +403,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setMyLocationEnabled(true);
         }
 
-        Button btnHospital = (Button) findViewById(R.id.btnHospital);
-        btnHospital.setOnClickListener(new View.OnClickListener() {
-            String Hospital = "hospital";
-            @Override
-            public void onClick(View v) {
-                Log.d("onClick", "Button is Clicked");
-                mMap.clear();
-                String url = getUrl(latitude, longitude, Hospital);
-                Object[] DataTransfer = new Object[2];
-                DataTransfer[0] = mMap;
-                DataTransfer[1] = url;
-                Log.d("onClick", url);
-                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
-                getNearbyPlacesData.execute(DataTransfer);
-                Toast.makeText(MapsActivity.this,"Nearby Hospitals", Toast.LENGTH_LONG).show();
-            }
-        });
-        Button btnpharmacy = (Button) findViewById(R.id.btnpHARMACY);
-        btnpharmacy.setOnClickListener(new View.OnClickListener() {
-            String pharmacy = "pharmacy";
-            @Override
-            public void onClick(View v) {
-                Log.d("onClick", "Button is Clicked");
-                mMap.clear();
-                String url = getUrl(latitude, longitude, pharmacy);
-                Object[] DataTransfer = new Object[2];
-                DataTransfer[0] = mMap;
-                DataTransfer[1] = url;
-                Log.d("onClick", url);
-                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
-                getNearbyPlacesData.execute(DataTransfer);
-                Toast.makeText(MapsActivity.this,"Nearby pharmacy", Toast.LENGTH_LONG).show();
-            }
-        });
-
-        btnambulance = (Button) findViewById(R.id.btnambulance);
-        btnambulance.setOnClickListener(new View.OnClickListener() {
-            String Hospital = "hospital";
-            @Override
-            public void onClick(View v) {
-                Log.d("onClick", "Button is Clicked");
-                mMap.clear();
-                String url = getUrl(latitude, longitude, Hospital);
-                Object[] DataTransfer = new Object[2];
-                DataTransfer[0] = mMap;
-                DataTransfer[1] = url;
-                Log.d("onClick", url);
-                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
-                getNearbyPlacesData.execute(DataTransfer);
-                Toast.makeText(MapsActivity.this,"Nearby ambulance", Toast.LENGTH_LONG).show();
-            }
-        });
-
-
-
         mpathology.setOnClickListener(new View.OnClickListener() {
             String pathology = "pathology";
 
@@ -493,14 +443,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             for (int j = 0; j < mModel.size(); j++) {
                                 if (marker.getTitle().equalsIgnoreCase(mModel.get(j).getTitle())) {
                                     mText.setText(mModel.get(j).getReview());
-                                    mDetail.setVisibility(View.VISIBLE);
+                                  //  mDetail.setVisibility(View.VISIBLE);
                                  //   Toast.makeText(MapsActivity.this, "Positi J", Toast.LENGTH_LONG).show();
+
+
                                     break;
                                 }
                             }
 
-                            marker.get
-                            Toast.makeText(MapsActivity.this, "position" + marker.getTitle(), Toast.LENGTH_LONG).show();
+                           // marker.get
+/*
+                            Intent intent = new Intent(MapsActivity.this, ScrollingActivity.class);
+                            startActivity(intent);
+*/
+                           // Toast.makeText(MapsActivity.this, "position" + marker.getTitle(), Toast.LENGTH_LONG).show();
+
                             return false;
                         }
                     });
@@ -785,7 +742,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 10000;
     public boolean checkLocationPermission(){
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
@@ -865,7 +822,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("onClick", url);
-                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
+                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
 
                 break;
@@ -876,7 +833,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("---onClick", url);
-                getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
                 break;
             case "gyno":
@@ -886,7 +843,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("---onClick", url);
-                getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
                 break;
 
@@ -897,7 +854,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("---onClick", url);
-                getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
                 break;
             case "neuro" :
@@ -907,7 +864,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("---onClick", url);
-                getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
                 break;
             case "derma" :
@@ -917,7 +874,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("---onClick", url);
-                getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
                 break;
             case "pedia" :
@@ -927,7 +884,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("---onClick", url);
-                getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
                 break;
             case "cardio" :
@@ -937,7 +894,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("---onClick", url);
-                getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
                 break;
 
@@ -970,10 +927,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             for (int j = 0; j < mModel.size(); j++) {
                                 if (marker.getTitle().equalsIgnoreCase(mModel.get(j).getTitle())) {
                                     mText.setText(mModel.get(j).getReview());
-                                    mDetail.setVisibility(View.VISIBLE);
+                                  //  mDetail.setVisibility(View.VISIBLE);
                                     break;
                                 }
                             }
+
+                            Intent intent = new Intent(MapsActivity.this, ScrollingActivity.class);
+                            startActivity(intent);
 
                             Toast.makeText(MapsActivity.this, "position" + marker.getTitle(), Toast.LENGTH_LONG).show();
                             return false;
@@ -983,7 +943,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
                     //move map camera
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(mLoca.get(i)));
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(20));
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(25));
                 }
                 break;
             case "pharmacy" :
@@ -993,7 +953,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("onClick", url);
-                getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
                 Toast.makeText(MapsActivity.this,"Nearby pharmacy", Toast.LENGTH_LONG).show();
                 break;
@@ -1004,11 +964,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer = new Object[2];
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
-                Log.d("---onClick", url);
-                getNearbyPlacesData = new GetNearbyPlacesData();
+                Log.d("---onClick", "url");
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
                 getNearbyPlacesData.execute(DataTransfer);
                 break;
 
+            case "doctor1" :
+                mMap.clear();
+                url = getUrl(lat, longtidue1, "hospital");
+                DataTransfer = new Object[2];
+                DataTransfer[0] = mMap;
+                DataTransfer[1] = url;
+                Log.d("---onClick", "url");
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
+                getNearbyPlacesData.execute(DataTransfer);
+                break;
+
+            case "doctor2" :
+                mMap.clear();
+                url = getUrl(lat, longtidue1, "hospital");
+                DataTransfer = new Object[2];
+                DataTransfer[0] = mMap;
+                DataTransfer[1] = url;
+                Log.d("---onClick", "url");
+                getNearbyPlacesData = new GetNearbyPlacesData(MapsActivity.this);
+                getNearbyPlacesData.execute(DataTransfer);
+                break;
         }
     }
 }

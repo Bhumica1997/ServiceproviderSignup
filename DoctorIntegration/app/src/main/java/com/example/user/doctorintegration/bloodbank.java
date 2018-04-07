@@ -1,5 +1,6 @@
 package com.example.user.doctorintegration;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -18,9 +19,13 @@ public class bloodbank extends android.support.v4.app.Fragment {
 
     }
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("bloodbank");
+public void onViewCreated(View view,@Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view,savedInstanceState);
+    getActivity().setTitle("bloodbank");
+
     }
 }
+
+
+
+

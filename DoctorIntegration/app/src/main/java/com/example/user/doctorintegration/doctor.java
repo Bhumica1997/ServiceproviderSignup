@@ -2,6 +2,7 @@ package com.example.user.doctorintegration;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,8 +52,9 @@ public class doctor extends Fragment {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toy = new Intent(getActivity(), MapsActivity.class);
-
+                Intent toy = new Intent(v.getContext(), MapsActivity.class);
+                toy.putExtra("KEY_BONE","doctor1");
+                Log.d("---doctor","unfs");
                 startActivity(toy);
 
             }
@@ -64,8 +66,9 @@ public class doctor extends Fragment {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toy = new Intent(getActivity(), MapsActivity.class);
-
+                Intent toy = new Intent(v.getContext(), MapsActivity.class);
+                toy.putExtra("KEY_BONE","doctor2");
+                Log.d("---doctor2","unfs");
                 startActivity(toy);
 
             }

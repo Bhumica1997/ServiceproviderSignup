@@ -166,7 +166,7 @@ public class SpsignupActivity extends AppCompatActivity {
                             //display some message here
                             Toast.makeText(SpsignupActivity.this, "Successfully registered", Toast.LENGTH_LONG).show();
                             addUser();
-                            Intent toy2 = new Intent(SpsignupActivity.this, NavigateActivity.class);
+                            Intent toy2 = new Intent(SpsignupActivity.this, MainActivity.class);
                             startActivity(toy2);
                         } else {
                             //display some message here
@@ -177,7 +177,6 @@ public class SpsignupActivity extends AppCompatActivity {
                     }
                 });
     }
-
     private void init() {
         but2 = (Button) findViewById(R.id.button);
         but2.setOnClickListener(new View.OnClickListener() {
