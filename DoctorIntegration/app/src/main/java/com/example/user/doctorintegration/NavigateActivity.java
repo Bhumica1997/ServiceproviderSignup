@@ -77,6 +77,8 @@ public class NavigateActivity extends AppCompatActivity implements NavigationVie
     private void displaySelectedScreen(int id) {
         Fragment fragment=null;
         switch(id) {
+            case R.id.nav_hospital:fragment = new hospital();
+                break;
             case R.id.nav_doctor:fragment = new doctor();
                 break;
             case R.id.nav_pharmacy:

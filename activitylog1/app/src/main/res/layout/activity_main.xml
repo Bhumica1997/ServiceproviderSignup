@@ -1,71 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editTextUsername"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context="com.example.user.activitylog1.MainActivity">
 
-   <TextView
-       android:id="@id/title"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="logic gates"
-       android:layout_centerHorizontal="true"
-       android:textSize="30sp"
-       android:textStyle="bold"
-       android:layout_below="@+id/toggleButton" />
-    <RadioGroup
-        android:layout_below="@id/title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/radio"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textviewuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:gravity="center"
+        android:text="USER SIGN UP"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:paddingTop="20dp"
+        android:hint="username"
+        android:inputType="textPersonName"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:paddingTop="20dp"
+        android:inputType="textPersonName|textWebEmailAddress"
+        android:hint="email id" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="password"
+        android:paddingTop="20dp"
+        android:inputType="textPassword"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/PhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="phone"
+        android:paddingTop="20dp"
+        android:hint="PhoneNumber" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonsignup"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="91dp" />
+        android:layout_weight="1"
+        android:text="signup" />
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ToggleButton"
-        android:layout_marginTop="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/title"
-        android:layout_toStartOf="@+id/title" />
+    </LinearLayout>
 
 
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RadioButton"
-        android:layout_marginLeft="22dp"
-        android:layout_marginStart="22dp"
-        android:layout_below="@+id/radio"
-        android:layout_alignLeft="@+id/toggleButton"
-        android:layout_alignStart="@+id/toggleButton"
-        android:layout_marginTop="88dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/radioButton"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp"
-        android:layout_toEndOf="@+id/radio"
-        android:layout_toRightOf="@+id/radio"
-        android:text="RadioButton" />
-
-</RelativeLayout>
+</LinearLayout>
 

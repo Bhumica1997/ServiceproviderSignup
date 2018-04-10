@@ -54,6 +54,7 @@ public class Firebase extends AppCompatActivity implements View.OnClickListener 
     private Button buttonChoose, buttonUpload;
     private ImageView imageView;
     private Uri filePath;
+    private Button Spbutton;
 
     private StorageReference storageReference;
 
@@ -67,9 +68,19 @@ public class Firebase extends AppCompatActivity implements View.OnClickListener 
         imageView = (ImageView) findViewById(R.id.imageView);
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
         buttonUpload = (Button) findViewById(R.id.buttonUpload);
+        Spbutton = (Button) findViewById(R.id.signupbutton);
 
         buttonChoose.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
+        Spbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Firebase.this,"Successfully Registered", Toast.LENGTH_LONG).show();
+                Intent toy3 = new Intent(Firebase.this, MainActivity.class);
+
+                startActivity(toy3);
+            }
+        });
     }
     private  void showFileChooser(){
         Intent intent = new Intent();
@@ -134,7 +145,7 @@ public class Firebase extends AppCompatActivity implements View.OnClickListener 
             filepath.putFile(filePath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    Toast.makeText(Firebase.this,"Upload Done", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(Firebase.this,"Upload Done", Toast.LENGTH_LONG).show();
                 }
             });
         }

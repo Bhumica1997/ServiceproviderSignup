@@ -1,5 +1,6 @@
 package com.example.user.doctorintegration;
 
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -12,11 +13,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -25,11 +28,14 @@ public class MainActivity extends AppCompatActivity {
     public Button login;
     public Button user;
     public Button spsignup;
+    @NotEmpty
     public EditText Email;
+    @NotEmpty
     public EditText Password;
     private ProgressDialog progressDialog;
 
     private FirebaseAuth firebaseAuth;
+    AwesomeValidation awesomeValidation;
 
 
 
@@ -41,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         Email = (EditText)findViewById(R.id.editTextEmail);
         Password = (EditText)findViewById(R.id.editTextPassword);
         login = (Button) findViewById(R.id.but1);
-        user= (Button) findViewById(R.id.button2);
-        spsignup = (Button) findViewById(R.id.button3);
+        user= (Button) findViewById(R.id.but2);
+        spsignup = (Button) findViewById(R.id.but3);
 
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
@@ -50,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                String regexPassword = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
+//                awesomeValidation.addValidation(MainActivity.this, R.id.editTextEmail, android.util.Patterns.EMAIL_ADDRESS, R.string.emailerror);
+//                awesomeValidation.addValidation(MainActivity.this, R.id.editTextPassword, regexPassword, R.string.passworderror);
                 String validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
 
                         "\\@" +
