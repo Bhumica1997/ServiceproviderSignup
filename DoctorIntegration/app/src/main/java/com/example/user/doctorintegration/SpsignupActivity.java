@@ -115,8 +115,10 @@ public class SpsignupActivity extends AppCompatActivity {
 
         but1 = (Button) findViewById(R.id.buttonsp);
 
-        String regexPassword = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
-        awesomeValidation.addValidation(SpsignupActivity.this, R.id.spname, "^[A-Za-z_]\\w{3,25}$", R.string.namerror);
+
+        String regexname = "^[A-Za-z_]\\w{3,25}$";
+        String regexPassword = "^([a-zA-Z0-9@*#]{8,15})$";
+        awesomeValidation.addValidation(SpsignupActivity.this, R.id.spname,regexname, R.string.namerror);
         awesomeValidation.addValidation(SpsignupActivity.this, R.id.editTextEmail1, android.util.Patterns.EMAIL_ADDRESS, R.string.emailerror);
         awesomeValidation.addValidation(SpsignupActivity.this, R.id.editTextPassword1, regexPassword, R.string.passworderror);
         awesomeValidation.addValidation(SpsignupActivity.this, R.id.spaddress, "^[#.0-9a-zA-Z\\s,-]+$", R.string.addresserror);
@@ -189,7 +191,7 @@ public class SpsignupActivity extends AppCompatActivity {
 
                         } else {
                             //display some message here
-                            Toast.makeText(SpsignupActivity.this, "Registration Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SpsignupActivity.this, "Enter Proper Email ", Toast.LENGTH_LONG).show();
                         }
                         progressDialog.dismiss();
 

@@ -15,19 +15,19 @@
         <item
             android:id="@+id/nav_pathology"
             android:icon="@drawable/ic_menu_send"
-            android:title="pathology" />
+            android:title="Pathology" />
         <item
             android:id="@+id/nav_pharmacy"
             android:icon="@drawable/ic_menu_send"
-            android:title="pharmacy" />
+            android:title="Pharmacy" />
         <item
             android:id="@+id/nav_ambulance"
             android:icon="@drawable/ic_menu_send"
-            android:title="ambulance" />
+            android:title="Ambulance" />
         <item
             android:id="@+id/nav_bloodbank"
             android:icon="@drawable/ic_menu_send"
-            android:title="blood bank" />
+            android:title="Blood Bank" />
     </group>
 
 

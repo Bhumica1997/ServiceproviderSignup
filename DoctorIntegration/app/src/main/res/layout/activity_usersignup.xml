@@ -55,18 +55,22 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@color/colorPrimary"
                     android:drawableRight="@drawable/ic_email_black_24dp"
                     android:hint="Email-Id"
                     android:maxLines="1"
                     android:padding="10dp"
                     android:textColor="#000000"
-                    android:textColorHint="@color/colorgrayc"/>
+                    android:textColorHint="@color/colorgrayc"
+                    android:singleLine="true"/>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:passwordToggleEnabled="true">
+                    android:textColorHint="@color/colorgrayc"
+                    app:passwordToggleEnabled="true"
+                    app:hintEnabled="false">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/editTextPassword"
@@ -75,7 +79,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="20dp"
                         android:background="@color/colorPrimary"
-                        android:hint="Password(min 8 Characters)"
+                        android:hint="Password"
                         android:padding="10dp"
                         android:textColor="#000000"
                         android:singleLine="true"
@@ -85,31 +89,6 @@
                         />
                 </android.support.design.widget.TextInputLayout>
 
-
-                <!--<EditText-->
-                    <!--android:id="@+id/editTextPassword"-->
-                    <!--android:layout_width="250dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_gravity="center"-->
-                    <!--android:layout_marginTop="20dp"-->
-                    <!--android:background="@color/colorPrimary"-->
-                    <!--android:hint="@string/password"-->
-                    <!--android:padding="10dp"-->
-                    <!--android:textColor="#000000"-->
-                    <!--android:singleLine="true"-->
-                    <!--android:inputType="textPassword"-->
-                    <!--android:textColorHint="@color/colorgrayc"/>-->
-
-                <!--android:drawableRight="@drawable/ic_lock_black_24dp"-->
-
-                <!--<Button-->
-                    <!--android:id="@+id/eyeButton"-->
-                    <!--android:layout_width="40dp"-->
-                    <!--android:layout_height="20dp"-->
-                    <!--android:layout_alignParentRight="true"-->
-                    <!--android:layout_marginRight="10dp"-->
-                    <!--android:layout_marginTop="15dp"-->
-                    <!--android:background="@drawable/ic_remove_red_eye_black_24dp" />-->
 
                 <EditText
                     android:id="@+id/phno"
@@ -122,6 +101,7 @@
                     android:hint="Phone-No"
                     android:padding="10dp"
                     android:textColor="#000000"
+                    android:singleLine="true"
                     android:textColorHint="@color/colorgrayc"/>
 
                 <Button

@@ -1,7 +1,6 @@
 <resources>
-    <string name="app_name">DoctotIntegration</string>
+    <string name="app_name_edit">Q Dr</string>
     <string name="title_activity_navigate">NavigateActivity</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -9,6 +8,8 @@
 
 
     <string-array name="category">
+        <item>Select Category</item>
+        <item>Hospital</item>
         <item>Doctor</item>
         <item>Pharmacy</item>
         <item>Pathology</item>
@@ -108,34 +109,37 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
 
-        <string name="recent_news">Hospital Information</string>
-        <string name="in_news">Kuvempunagar</string>
+    <string name="recent_news">Hospital Information</string>
+    <string name="in_news">Kuvempunagar</string>
 
-    <string name="namerror">Username should contain more than 3 characters, must be alphanumeric</string>
-    <string name="emailerror">Enter email in proper format </string>
-    <string name="passworderror">Min 8 characters,Enter atleast 1 upper case letter, 1 lower case letter, 1 digit and 1 special character</string>
+    <string name="namerror">Enter min 3 alphabets, No spaces allowed</string>
+    <string name="emailerror">Enter email in proper format,No spaces allowed </string>
+    <string name="passworderror">Enter Min 8 characters</string>
     <string name="phonenumbererror">Enter your 10 digit phone number</string>
     <string name="addresserror">Enter your address</string>
 
     <string-array name="Subcategory">
+        <item>Select your Sub-category</item>
         <item>Allopathy</item>
         <item>Ayurvedic</item>
         <item>Homoeopathy</item>
+        <item>None</item>
     </string-array>
 
-    <string name="Password">Password(min of 8 characters)</string>
 
     <string-array name="Specilizations">
-        <item>Cardiology</item>
-        <item>Diabeties</item>
-        <item>Dermatology</item>
+        <item>Select Specilization</item>
+        <item>Cardiologist</item>
+        <item>Diabetician</item>
+        <item>Dermatologist</item>
         <item>Dentist</item>
-        <item>Gynaceology</item>
+        <item>Gynaceologist</item>
         <item>General Physician</item>
-        <item>Opthalmology</item>
-        <item>Orthopedic</item>
+        <item>Opthalmologist</item>
+        <item>Orthopedician</item>
         <item>Pediaterecian</item>
-        <item>Neurology</item>
+        <item>Neurologist</item>
+        <item>None</item>
     </string-array>
 
 

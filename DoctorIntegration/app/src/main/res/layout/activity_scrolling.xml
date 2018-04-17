@@ -25,7 +25,7 @@
 
             <ImageView
                 app:layout_collapseMode="parallax"
-                android:src="@drawable/hospital"
+                android:src="@drawable/heart"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
                 android:layout_width="match_parent"

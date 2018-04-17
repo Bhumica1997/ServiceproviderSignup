@@ -20,10 +20,10 @@ import android.widget.ImageView;
 
 public class ImageAdapter extends BaseAdapter {
     private Context CTX;
-    private Integer image_id[] = {R.drawable.diabeties,
-            R.drawable.opthal, R.drawable.ortho, R.drawable.pregnant,
-            R.drawable.teeth, R.drawable.skin, R.drawable.generalphysician,
-            R.drawable.neurology, R.drawable.pediatrician};
+    private Integer image_id[] = {R.drawable.diabetic,
+            R.drawable.eye, R.drawable.ortho, R.drawable.preg,
+            R.drawable.dentist, R.drawable.derma, R.drawable.general,
+            R.drawable.brain, R.drawable.kid};
 
     public ImageAdapter( Context CTX) {
         this.CTX = CTX;

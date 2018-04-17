@@ -42,7 +42,6 @@ public class doctor extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent toy = new Intent(getActivity(), GridActivity.class);
-
                 startActivity(toy);
 
             }

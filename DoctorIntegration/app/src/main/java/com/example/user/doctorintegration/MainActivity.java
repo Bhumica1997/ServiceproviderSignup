@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(toy);
                 }else {
                     progressDialog.dismiss();
-                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Login Failed!! Please SignUp If you are a New-User", Toast.LENGTH_SHORT).show();
                 }
             }
         });

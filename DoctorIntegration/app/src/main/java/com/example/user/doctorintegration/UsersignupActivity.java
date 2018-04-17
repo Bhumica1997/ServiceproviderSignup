@@ -109,9 +109,13 @@ public class UsersignupActivity extends AppCompatActivity {
         phno = (EditText) findViewById(R.id.phno);
         but1 = (Button) findViewById(R.id.but1);
 
-        String regexPassword = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
-        awesomeValidation.addValidation(UsersignupActivity.this, R.id.usrname, "^[A-Za-z_]\\w{3,25}$", R.string.namerror);
-        awesomeValidation.addValidation(UsersignupActivity.this, R.id.editTextEmail, android.util.Patterns.EMAIL_ADDRESS, R.string.emailerror);
+
+        String regexname = "^[A-Za-z_ ]\\w{2,25}$";
+        String regexPassword = "^([a-zA-Z0-9@*#]{8,15})$";
+        String regexemail = "^[_A-Za-z0-9-\\\\+]+(\\\\.[_A-Za-z0-9-]+)*\n" +
+                               "@[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$;";
+        awesomeValidation.addValidation(UsersignupActivity.this, R.id.usrname,regexname, R.string.namerror);
+        awesomeValidation.addValidation(UsersignupActivity.this, R.id.editTextEmail,android.util.Patterns.EMAIL_ADDRESS, R.string.emailerror);
         awesomeValidation.addValidation(UsersignupActivity.this, R.id.editTextPassword, regexPassword, R.string.passworderror);
         awesomeValidation.addValidation(UsersignupActivity.this, R.id.phno, "^\\d{10}$", R.string.phonenumbererror);
 
@@ -164,18 +168,18 @@ public class UsersignupActivity extends AppCompatActivity {
                         //checking if success
                         if (task.isSuccessful()) {
                             //display some message here
+                            addUser();
+                            Intent toy2 = new Intent(UsersignupActivity.this, NavigateActivity.class);
+                            startActivity(toy2);
                             Toast.makeText(UsersignupActivity.this, "Successfully registered", Toast.LENGTH_LONG).show();
 
                         } else {
                             //display some message here
-                            Toast.makeText(UsersignupActivity.this, "Registration Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(UsersignupActivity.this, "Enter Proper Email", Toast.LENGTH_LONG).show();
 
                         }
                         progressDialog.dismiss();
-                        addUser();
-                        Intent toy2 = new Intent(UsersignupActivity.this, NavigateActivity.class);
 
-                        startActivity(toy2);
 
                     }
                 });

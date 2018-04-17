@@ -63,12 +63,13 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             @Override
             public boolean onMarkerClick(Marker marker) {
 
-                //Toast.makeText(mContext, "clicked ambu", Toast.LENGTH_LONG).show();
+                Toast.makeText(mContext, "clicked ambu", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(mContext, ScrollingActivity.class);
                 mContext.startActivity(intent);
                 return false;
             }
         });
+
     }
 
     private void ShowNearbyPlaces(List<HashMap<String, String>> nearbyPlacesList) {

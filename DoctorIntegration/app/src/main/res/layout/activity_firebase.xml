@@ -19,14 +19,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Choose" />
+            android:text="Choose"
+            android:background="@color/colorPrimaryDark"/>
 
         <Button
             android:id="@+id/buttonUpload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Upload" />
+            android:text="Upload"
+            android:background="@color/colorPrimaryDark"/>
 
     </LinearLayout>
 
@@ -50,5 +52,6 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="447dp" />
+        tools:layout_editor_absoluteY="447dp"
+        android:background="@color/colorPrimaryDark"/>
 </RelativeLayout>
