@@ -1,0 +1,49 @@
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.user.doctorintegration.MapsActivity"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/ic_gps"
+            />
+
+
+    </RelativeLayout>
+    <TextView
+
+            android:id="@+id/position"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:entries="@array/areas"
+        android:layout_marginTop="20dp"
+        android:background="#ffff"
+        android:layout_marginLeft="10dp"/>
+
+</FrameLayout>

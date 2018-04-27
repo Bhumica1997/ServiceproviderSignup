@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+
+                        android:src="@drawable/doctor"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Quick Dr"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:textSize="30dp"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/usrname"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableRight="@drawable/ic_person_add_black_24dp"
+                    android:hint="User-Name"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/colorgrayc"/>
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableRight="@drawable/ic_email_black_24dp"
+                    android:hint="Email-Id"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/colorgrayc"
+                    android:singleLine="true"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/colorgrayc"
+                    app:passwordToggleEnabled="true"
+                    app:hintEnabled="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextPassword"
+                        android:layout_width="250dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorPrimary"
+                        android:hint="Password"
+                        android:padding="10dp"
+                        android:textColor="#000000"
+                        android:singleLine="true"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/colorgrayc"
+                        android:drawableRight="@drawable/ic_lock_black_24dp"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <EditText
+                    android:id="@+id/phno"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableRight="@drawable/ic_phone_black_24dp"
+                    android:hint="Phone-No"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:singleLine="true"
+                    android:textColorHint="@color/colorgrayc"/>
+
+                <Button
+                    android:id="@+id/but1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/buttonstyle"
+                    android:text="Sign Up"
+                    android:textColor="#000"/>
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="com.example.user.doctorintegration.UsersignupActivity"-->
+    <!--android:orientation="vertical"-->
+    <!--android:background="@color/azur">-->
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:text="Sign Up"-->
+            <!--android:textSize="30sp"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/usrname"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:hint="username"-->
+            <!--android:singleLine="true"-->
+            <!--android:drawableLeft="@drawable/ic_person_add_black_24dp"/>-->
+            <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+
+        <!--<EditText-->
+
+            <!--android:id="@+id/editTextEmail"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:hint="email_id"-->
+            <!--android:drawableLeft="@drawable/ic_email_black_24dp"-->
+            <!--android:singleLine="true"/>-->
+            <!--&lt;!&ndash;android:maxLines="1"&ndash;&gt;-->
+
+            <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:passwordToggleEnabled="true"-->
+            <!--&gt;-->
+
+            <!--<android.support.design.widget.TextInputEditText-->
+                <!--android:id="@+id/editTextPassword"-->
+                <!--android:layout_width="300dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:drawableLeft="@drawable/ic_lock_black_24dp"-->
+                <!--android:hint="password- Enter min of 8 characters"-->
+                <!--android:inputType="textPassword"-->
+                <!--android:singleLine="true" />-->
+                <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/phno"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:hint="phone no"-->
+            <!--android:drawableLeft="@drawable/ic_phone_black_24dp"-->
+            <!--android:singleLine="true"/>-->
+
+        <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+        <!--<Button-->
+            <!--android:id="@+id/but1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:text="Sign Up"-->
+            <!--android:textColor="@color/colorPrimary"-->
+           <!--/>-->
+            <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+<!--</LinearLayout>-->

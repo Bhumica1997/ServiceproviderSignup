@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.doctorintegration.Firebase">
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="380dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="70dp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/buttonChoose"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Choose"
+            android:background="@drawable/buttonstyle"/>
+
+        <Button
+            android:id="@+id/buttonUpload"
+            android:layout_width="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Upload"
+            android:background="@drawable/buttonstyle"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Sign Up"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="18dp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="447dp"
+        android:background="@drawable/buttonstyle"/>
+</RelativeLayout>

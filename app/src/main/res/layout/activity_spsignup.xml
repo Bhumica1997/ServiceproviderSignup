@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+
+                        android:src="@drawable/doctor"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Quick Dr"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:textSize="30dp"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/spname"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:hint="Name"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/colorgrayc"
+                    android:drawableRight="@drawable/ic_person_add_black_24dp"
+                    />
+
+                <EditText
+                    android:id="@+id/spaddress"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:hint="Address"
+                    android:ems="10"
+                    android:inputType="textPostalAddress"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/colorgrayc"
+                    android:drawableRight="@drawable/ic_edit_location_black_24dp"
+                    />
+
+                <EditText
+                    android:id="@+id/editTextEmail1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/colorPrimary"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email-id"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/colorgrayc"
+                    android:maxLines="1"
+                    android:drawableRight="@drawable/ic_email_black_24dp"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/colorgrayc"
+                    app:passwordToggleEnabled="true"
+                    app:hintEnabled="false">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextPassword1"
+                        android:layout_width="250dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorPrimary"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:hint="Password"
+                        android:padding="10dp"
+                        android:textColor="#000000"
+                        android:textColorHint="@color/colorgrayc"
+                        android:singleLine="true"
+                        />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<EditText-->
+                    <!--android:id="@+id/editTextPassword1"-->
+                    <!--android:layout_width="250dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:background="@color/colorPrimary"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="textPassword"-->
+                    <!--android:hint="Password"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textColor="#000000"-->
+                    <!--android:textColorHint="@color/colorgrayc"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:drawableRight="@drawable/ic_remove_red_eye_black_24dp"/>-->
+
+                <EditText
+                    android:id="@+id/spphno"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:ems="10"
+                    android:hint="Phone"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/colorgrayc"
+                    android:singleLine="true"
+                    android:drawableRight="@drawable/ic_phone_black_24dp"/>
+
+
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:entries="@array/category"
+                    android:background="@color/colorPrimary"
+                    android:padding="3dp"
+                    />
+
+
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:scrollbarSize="15dp"
+                    android:entries="@array/Subcategory"
+                    android:padding="3dp"
+                    android:background="@color/colorPrimary"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:entries="@array/Specilizations"
+                    android:padding="3dp"
+                    android:background="@color/colorPrimary"
+                    />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:text="Upload your certifications and register"
+                    android:textSize="15sp"
+                    android:layout_marginTop="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="italic"
+                    />
+
+                <Button
+                    android:id="@+id/buttonsp"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/buttonstyle"
+                    android:textColor="#000"
+                    android:layout_marginBottom="20dp"
+                    android:hint="upload your certifications"
+                    android:text="Upload and Register" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout><!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="com.example.user.doctorintegration.SpsignupActivity"-->
+    <!--android:orientation="vertical"-->
+    <!--android:background="@color/azur">-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="7dp"-->
+            <!--android:text="Sign Up"-->
+            <!--android:textSize="30sp"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/spname"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:hint="username"-->
+            <!--android:drawableLeft="@drawable/ic_person_add_black_24dp"-->
+            <!--android:singleLine="true"/>-->
+            <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/spaddress"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:drawableLeft="@drawable/ic_edit_location_black_24dp"-->
+            <!--android:hint="address"   />-->
+            <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/editTextEmail1"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:hint="email_id"-->
+            <!--android:drawableStart="@drawable/ic_email_black_24dp"-->
+            <!--android:singleLine="true"/>-->
+            <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:passwordToggleEnabled="true">-->
+
+            <!--<android.support.design.widget.TextInputEditText-->
+
+                <!--android:id="@+id/editTextPassword1"-->
+                <!--android:layout_width="300dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:hint="password- Enter min of 8 characters"-->
+                <!--android:drawableLeft="@drawable/ic_lock_black_24dp"-->
+                <!--android:inputType="textPassword"-->
+                <!--android:singleLine="true"    />-->
+                <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/spphno"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:drawableLeft="@drawable/ic_phone_black_24dp"-->
+            <!--android:hint="phone no"-->
+            <!--android:singleLine="true"/>-->
+            <!--&lt;!&ndash;android:background="@drawable/edittextstyle"&ndash;&gt;-->
+
+
+        <!--<TextView-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:text="Select Category"-->
+            <!--android:textSize="10dp" />-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner1"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:entries="@array/category" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:text="Upload your certifications" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="0.5dp"-->
+            <!--android:text="upload"-->
+            <!--android:textSize="18sp" />-->
+
+
+        <!--<Button-->
+            <!--android:id="@+id/buttonsp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:text="Sign Up" />-->
+            <!--&lt;!&ndash;android:background="@drawable/buttonstyle"&ndash;&gt;-->
+
+
+    <!--</LinearLayout>-->
+<!--</LinearLayout>-->
