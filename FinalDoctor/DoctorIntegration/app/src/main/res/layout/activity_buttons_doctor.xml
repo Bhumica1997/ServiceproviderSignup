@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Hospi">
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="127dp"
+        android:text="Allopathy"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="99dp"
+        android:background="@color/bluedark"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Ayurvedic"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="210dp"
+        android:background="@color/bluedark"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="128dp"
+        android:text="Homeopathy"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="333dp"
+        android:background="@color/bluedark"
+        android:textColor="#fff"/>
+</RelativeLayout>
